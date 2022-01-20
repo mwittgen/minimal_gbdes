@@ -8,28 +8,28 @@
 import sys
 #import wcsfit
 
-from lsst.daf.butler import Butler
-import example
-#from lsst.daf.butler import Butler
-print('imports done')
+mode = int(sys.argv[1])
 
-#butler = Butler('/repo/main', collections="HSC/runs/RC2/w_2021_34/DM-31524")
-#butler.get("skyMap")
-#print('got skymap')
-x = example.add(1,2)
-print(x)
-sys.exit()
-print("spaceRep 2:")
-wcsfit.spaceReplace2("test")
+if mode == 1:
+    print('importing butler first')
+    from lsst.daf.butler import Butler
+    import example
 
-print("orig:")
-fh = wcsfit.Fields(['9813'], [1.0], [2.0], [3.0])
+if mode == 2:
+    print('importing pybind11 package first')
+    import example
+    from lsst.daf.butler import Butler
 
-fields = [9813]
-ras = [150.2]
-decs = [2.5]
-epochs = [2015.5]
-fieldNames = []
-fieldNames.append(str(fields[0]))
-fh2 = wcsfit.Fields(fieldNames, ras, decs, epochs)
-print('done')
+try:
+    butler = Butler('/repo/main', collections="HSC/runs/RC2/w_2021_34/DM-31524")
+    butler.get("skyMap")
+    print('got skymap')
+except:
+    print('butler.get failed')
+
+try:
+    x = example.add(1,2)
+    print('pybind11 package worked')
+except:
+    print('pybind11 package failed')
+
