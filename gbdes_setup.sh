@@ -1,0 +1,13 @@
+export YAML_DIR=../yaml-cpp
+export GBUTIL_DIR=../gb_packages/gbutil/
+export GBFITS_DIR=../gb_packages/gbfits
+export ASTROMETRY_DIR=../gb_packages/astrometry
+export PHOTOMETRY_DIR=../gb_packages/photometry
+export EIGEN_DIR=$EIGEN_DIR/include
+export FFTW_DIR=$CONDA_PREFIX
+export CFITSIO_DIR=$CONDA_PREFIX
+export LD_LIBRARY_PATH=../yaml-cpp/build:$LD_LIBRARY_PATH
+export PATH=../gbdes/bin:$PATH
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:../yaml-cpp/lib/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:./obj
