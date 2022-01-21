@@ -9,7 +9,7 @@ fftw_path = os.path.join(os.environ['FFTW_DIR'], 'include/')
 cfitsio_path = os.path.join(os.environ['CFITSIO_DIR'], 'include/')
 conda_include = os.path.join(os.environ['CONDA_PREFIX'], 'include')
 include_dirs = [yaml_path, fftw_path, eigen_path, cfitsio_path,
-                                    'include',
+                                    'include', 'gbutil/include',
                                     '../gb_packages/gbfits'] + glob('../gb_packages/*/include')
 
 ext_modules = [
