@@ -9,4 +9,5 @@ int main() {
    std::istringstream iss (stringvalues);
    
    Instrument testI("test");
+   std::cerr << "test done" << std::endl;
 }

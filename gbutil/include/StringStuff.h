@@ -16,9 +16,9 @@
 using std::string;
 
 namespace stringstuff {
-  double testAdd(double i, double j) {
-    return i + j;
-  }
+  //double testAdd(double i, double j) {
+  //  return i + j;
+  //}
   
   extern bool isComment(const string& instr);
   
