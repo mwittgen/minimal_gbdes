@@ -4,12 +4,14 @@
 #include <string>
 #include <vector>
 #include <iostream>
-//#include "Std.h"
+
+//#include "Astrometry.h"
+#include "Std.h"
 /*#include <map>
 #include <memory>
 #include "Std.h"
 #include "Bounds.h"
-#include "Astrometry.h"
+
 #include "NameIndex.h"
 #include "PixelMapCollection.h"
 */
