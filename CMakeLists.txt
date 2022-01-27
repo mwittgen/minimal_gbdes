@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.14)
 # set the project name
 project(minimal)
 
-configure_file(config.h.in config.h)
+#configure_file(config.h.in config.h)
 
 include(CheckLibraryExists)
 
@@ -14,11 +14,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 find_library(CFITSIO cfitsio REQUIRED)
 #find_package(CFITSIO)
 
-find_library(YAML-CPP
-             NAMES yaml-cpp
-             PATHS ${PROJECT_SOURCE_DIR}/../yaml-cpp/
-             PATH_SUFFIXES lib
-             REQUIRED)
+
+#find_package(CFITSIO REQUIRED)
+find_package(YAML-CPP REQUIRED)
+
 
 # TMV or Eigen must be available, but TMV is preferred
 find_package(TMV QUIET)

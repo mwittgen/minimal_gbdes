@@ -9,7 +9,7 @@ set(PYTHON_MODULE_EXTENSION ".so")
 
 pybind11_add_module(example testpybind.cpp)
 
-target_link_libraries(example PUBLIC gbutil)
+target_link_libraries(example PUBLIC gbutil::gbutil)
 target_link_libraries(example PUBLIC subs)
 
 install(TARGETS example DESTINATION "${PROJECT_SOURCE_DIR}")
