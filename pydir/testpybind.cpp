@@ -1,6 +1,6 @@
 #include <pybind11/pybind11.h>
 
-#include "StringStuff.h"
+#include <StringStuff.h>
 #include <iostream>
 
 int add(int i, int j) {

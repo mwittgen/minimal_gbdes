@@ -6,10 +6,9 @@
 #include <iostream>
 
 //#include "Astrometry.h"
-#include "Std.h"
 /*#include <map>
 #include <memory>
-#include "Std.h"
+#include <Std.h>
 #include "Bounds.h"
 
 #include "NameIndex.h"
